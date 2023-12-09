@@ -10,16 +10,16 @@
       <div class="postGenerator">Post Generator</div>
       <form id="postForm">
         <label class="PGLabel" for="postTitle">Post Title:<sup>*</sup></label>
-        <input class="PGInput" type="text" id="postTitle" required>
+        <input class="PGInput" type="text" placeholder="Short Title About Post" id="postTitle" required>
   
         <label class="PGLabel" for="imageURL">Image URL:<sup>*</sup></label>
-        <input class="PGInput" type="text" id="imageURL" required>
+        <input class="PGInput" type="url" placeholder="Eg. https://" id="imageURL" required>
   
         <label class="PGLabel" for="imageAlt">Image Alt Text:<sup>*</sup></label>
-        <input class="PGInput" type="text" id="imageAlt" required>
+        <input class="PGInput" type="text" placeholder="Optional" id="imageAlt" required>
   
         <label class="PGLabel" for="imageTitle">Image Title:</label>
-        <input class="PGInput" type="text" id="imageTitle" required>
+        <input class="PGInput" type="text" placeholder="Eg. Optional" id="imageTitle" required>
   
         <label class="PGLabel" for="postIntroduction">Post Introduction:<sup>*</sup></label>
         <textarea class="PGTextarea" id="postIntroduction" required></textarea>
@@ -65,13 +65,13 @@
         <input class="PGInput" type="text" id="downloadFilename" placeholder="Eg. filename.zip, filename.rar" required>
   
         <label class="PGLabel" for="downloadFilesize">File Size:</label>
-        <input class="PGInput" type="text" id="downloadFilesize" placeholder="Eg. 18KB" required>
+        <input class="PGInput" type="number" id="downloadFilesize" placeholder="Eg. 24KB" required>
   
         <label class="PGLabel" for="previewURL">Preview URL:</label>
-        <input class="PGInput" type="text" id="previewURL" placeholder="Eg. https://" required>
+        <input class="PGInput" type="url" id="previewURL" placeholder="Eg. https://" required>
   
         <label class="PGLabel" for="downloadURL">Download URL:<sup>*</sup></label>
-        <input class="PGInput" type="text" id="downloadURL" placeholder="Eg. https://" required>
+        <input class="PGInput" type="url" id="downloadURL" placeholder="Eg. https://" required>
   
         <button class="PGButton" type="button" onclick="generatePost()">Generate Post</button>
       </form>
