@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>PostGen</title>
+<link rel="stylesheet" href="assets/styles.css">
+</head>
+<body>
+<div class="PGContainer">
+      <div class="postGenerator">Post Generator</div>
+      <form id="postForm">
+        <label class="PGLabel" for="postTitle">Post Title:<sup>*</sup></label>
+        <input class="PGInput" type="text" id="postTitle" required>
+  
+        <label class="PGLabel" for="imageURL">Image URL:<sup>*</sup></label>
+        <input class="PGInput" type="text" id="imageURL" required>
+  
+        <label class="PGLabel" for="imageAlt">Image Alt Text:<sup>*</sup></label>
+        <input class="PGInput" type="text" id="imageAlt" required>
+  
+        <label class="PGLabel" for="imageTitle">Image Title:</label>
+        <input class="PGInput" type="text" id="imageTitle" required>
+  
+        <label class="PGLabel" for="postIntroduction">Post Introduction:<sup>*</sup></label>
+        <textarea class="PGTextarea" id="postIntroduction" required></textarea>
+        <div class="button-PGContainer">
+          <button class="PGButton" type="button" onclick="insertTag('<b>', '</b>', 'postIntroduction')">Bold</button>
+          <button class="PGButton" type="button" onclick="insertTag('<i>', '</i>', 'postIntroduction')">Italic</button>
+          <button class="PGButton" type="button" onclick="insertTag('<u>', '</u>', 'postIntroduction')">Underline</button>
+          <button class="PGButton" type="button" onclick="insertTag('<code>', '</code>', 'postIntroduction')">Code</button>
+          <button class="PGButton" type="button" onclick="insertTag('<strike>', '</strike>', 'postIntroduction')">Strike</button>
+          <button class="PGButton" type="button" onclick="insertTag('<pre>', '</pre>', 'postIntroduction')">Pre</button>
+          <button class="PGButton" type="button" onclick="insertTag('<blockquote>', '</blockquote>', 'postIntroduction')">Blockquote</button>
+          <button class="PGButton" type="button" onclick="insertTag('<a href=&quot;&quot;>', '</a>', 'postIntroduction')">Link</button>
+        </div>
+  
+        <label class="PGLabel" for="postDescription">Post Description:<sup>*</sup></label>
+        <textarea class="PGTextarea" id="postDescription" required></textarea>
+        <div class="button-PGContainer">
+          <button class="PGButton" type="button" onclick="insertTag('<b>', '</b>', 'postDescription')">Bold</button>
+          <button class="PGButton" type="button" onclick="insertTag('<i>', '</i>', 'postDescription')">Italic</button>
+          <button class="PGButton" type="button" onclick="insertTag('<u>', '</u>', 'postDescription')">Underline</button>
+          <button class="PGButton" type="button" onclick="insertTag('<code>', '</code>', 'postDescription')">Code</button>
+          <button class="PGButton" type="button" onclick="insertTag('<strike>', '</strike>', 'postDescription')">Strike</button>
+          <button class="PGButton" type="button" onclick="insertTag('<pre>', '</pre>', 'postDescription')">Pre</button>
+          <button class="PGButton" type="button" onclick="insertTag('<blockquote>', '</blockquote>', 'postDescription')">Blockquote</button>
+          <button class="PGButton" type="button" onclick="insertTag('<a href=&quot;&quot;>', '</a>', 'postDescription')">Link</button>
+        </div>
+  
+        <label class="PGLabel" for="postFeatures">Post Features:<sup>*</sup></label>
+        <textarea class="PGTextarea" id="postFeatures" required></textarea>
+        <div class="button-PGContainer">
+          <button class="PGButton" type="button" onclick="insertTag('<ol>', '</ol>', 'postFeatures')">ol</button>
+          <button class="PGButton" type="button" onclick="insertTag('<li>', '</li>', 'postFeatures')">li</button>
+          <button class="PGButton" type="button" onclick="insertTag('<ul>', '</ul>', 'postFeatures')">ul</button>
+          <button class="PGButton" type="button" onclick="insertTag('<b>', '</b>', 'postFeatures')">Bold</button>
+          <button class="PGButton" type="button" onclick="insertTag('<i>', '</i>', 'postFeatures')">Italic</button>
+          <button class="PGButton" type="button" onclick="insertTag('<u>', '</u>', 'postFeatures')">Underline</button>
+          <button class="PGButton" type="button" onclick="insertTag('<code>', '</code>', 'postFeatures')">Code</button>
+  
+          <button class="PGButton" type="button" onclick="insertTag('<a href=&quot;&quot;>', '</a>', 'postFeatures')">Link</button>
+        </div>
+  
+        <label class="PGLabel" for="downloadFilename">File Name:<sup>*</sup></label>
+        <input class="PGInput" type="text" id="downloadFilename" placeholder="Eg. filename.zip, filename.rar" required>
+  
+        <label class="PGLabel" for="downloadFilesize">File Size:</label>
+        <input class="PGInput" type="text" id="downloadFilesize" placeholder="Eg. 18KB" required>
+  
+        <label class="PGLabel" for="previewURL">Preview URL:</label>
+        <input class="PGInput" type="text" id="previewURL" placeholder="Eg. https://" required>
+  
+        <label class="PGLabel" for="downloadURL">Download URL:<sup>*</sup></label>
+        <input class="PGInput" type="text" id="downloadURL" placeholder="Eg. https://" required>
+  
+        <button class="PGButton" type="button" onclick="generatePost()">Generate Post</button>
+      </form>
+  
+      <div id="generatedPost">
+        <div class="postGenerator">Generated HTML Code</div>
+        <textarea class="PGTextarea" id="generatedCode" readonly></textarea>
+        <button class="PGButton" id="copyButton" onclick="copyToClipboard()">Copy HTML Code</button>
+      </div>
+          </div>
+<script src="assets/script.js"></script>
+</body>
+</html>
