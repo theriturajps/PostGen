@@ -76,7 +76,7 @@
             <div class='dldIn'>
               <span data-text='Name'>${downloadFilename}.zip</span>
               <span data-text='Category'>File</span>
-              <span data-text='Size'>${downloadFilesize}</span>
+              <span data-text='Size'>${downloadFilesize}KB</span>
               <span data-text='Demo'><a href="${previewURL}" target="_blank">Preview</a></span>
               <span data-text='Extension'>.zip</span>
             </div>
