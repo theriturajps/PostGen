@@ -74,11 +74,11 @@
               </svg>
             </div>
             <div class='dldIn'>
-              <span data-text='Name'>${downloadFilename}.zip</span>
+              <span data-text='Name'>${downloadFilename}.${downloadExtension}</span>
               <span data-text='Category'>File</span>
               <span data-text='Size'>${downloadFilesize}KB</span>
               <span data-text='Demo'><a href="${previewURL}" target="_blank">Preview</a></span>
-              <span data-text='Extension'>.zip</span>
+              <span data-text='Extension'>.${downloadExtension}</span>
             </div>
           </div>
           <button onclick='download("${downloadURL}", "10", "false", "#download1")' class='dldBt dldDl'><svg viewBox='0 0 24 24'><polyline points='8 17 12 21 16 17'/><line x1='12' x2='12' y1='12' y2='21'/><path d='M20.88 18.09A5 5 0 0 0 18 9h-1.26A8 8 0 1 0 3 16.29'/></svg></button>
