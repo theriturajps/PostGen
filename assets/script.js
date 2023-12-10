@@ -29,6 +29,7 @@
         const postFeatures = document.getElementById('postFeatures').value;
         const downloadFilename = document.getElementById('downloadFilename').value;
         const downloadFilesize = document.getElementById('downloadFilesize').value;
+        const downloadExtension = document.getElementById('downloadExtension').value;
         const previewURL = document.getElementById('previewURL').value;
         const downloadURL = document.getElementById('downloadURL').value;
     
